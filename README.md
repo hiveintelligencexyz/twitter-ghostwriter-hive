@@ -19,6 +19,7 @@ This project is a Twitter AI Agent Ghostwriter that interacts with the Twitter A
    - API Secret Key (Consumer Secret)
    - Access Token
    - Access Token Secret
+   #### Important: Make sure Access Token has Read and Write access.
 4. Create a `.env` file in the project root and add your Twitter credentials:
    ```
    TWITTER_API_KEY=your_api_key
