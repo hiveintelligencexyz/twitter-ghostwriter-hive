@@ -1,6 +1,6 @@
-# Twitter AI Agent Powered by Hive Intelligence
+# Twitter AI Agent Ghostwriter Powered by Hive Intelligence
 
-This project is a Twitter AI Agent that interacts with the Twitter API and Hive Intelligence API to post tweets on behalf of user.
+This project is a Twitter AI Agent Ghostwriter that interacts with the Twitter API and Hive Intelligence API to post tweets on behalf of user.
 
 ## Prerequisites
 
@@ -36,6 +36,7 @@ This project is a Twitter AI Agent that interacts with the Twitter API and Hive 
    ```
    HIVE_API_KEY=your_hive_api_key
    ```
+Either dev or prod key will work. Development key has certain limitations.
 
 ### 3. Python Environment Setup
 
@@ -59,7 +60,24 @@ This project is a Twitter AI Agent that interacts with the Twitter API and Hive 
    pip install -r requirements.txt
    ```
 
-### 4. Running the Bot
+### 4. Create a csv file with list of topics
+
+Create a CSV file at the top of the directory containing a list of topics you'd like Hive to write about, with some description.
+
+Add the name of the file in .env. Default name is topics.csv
+
+Sample CSV file:
+
+```
+Topic, Description
+On-Chain Data Analytics,"Highlight the power of analyzing blockchain transaction data for predictive modeling, emphasizing real-time insights for DeFi protocols."
+Federated Learning on Blockchain,"Tweet about combining federated learning with blockchain to enable secure, decentralized AI training across distributed datasets."
+```
+
+Suggestion: You can use AI tools like Grok or Perplexity, with access to real time internet trends, to create a CSV file of topics as per your choice.
+
+
+### 5. Running the Bot
 
 To start the bot, run:
 ```bash
@@ -71,6 +89,7 @@ The bot will create a log file `tweet_bot.log` to track its activities.
 ## Project Structure
 
 - `main.py`: Main bot script
+- `topics.csv`: CSV file containing a list of topics and description
 - `src/`: Source code directory
 - `topics.csv`: Topics data file
 - `requirements.txt`: Python dependencies
