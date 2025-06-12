@@ -68,11 +68,13 @@ Add the name of the file in .env. Default name is topics.csv
 
 Sample CSV file:
 
+```topics.csv```
 ```
 Topic, Description
 On-Chain Data Analytics,"Highlight the power of analyzing blockchain transaction data for predictive modeling, emphasizing real-time insights for DeFi protocols."
 Federated Learning on Blockchain,"Tweet about combining federated learning with blockchain to enable secure, decentralized AI training across distributed datasets."
 ```
+At each run, bot will use cache file ```last_topic_index.txt``` to read the index of topic from last run and will use the next topic for current run (index + 1). If the cache file doesn't exist, it will start from first index and create the file to store the current topic index.
 
 Suggestion: You can use AI tools like Grok or Perplexity, with access to real time internet trends, to create a CSV file of topics as per your choice.
 
@@ -89,7 +91,6 @@ The bot will create a log file `tweet_bot.log` to track its activities.
 ## Project Structure
 
 - `main.py`: Main bot script
-- `topics.csv`: CSV file containing a list of topics and description
 - `src/`: Source code directory
 - `topics.csv`: Topics data file
 - `requirements.txt`: Python dependencies
